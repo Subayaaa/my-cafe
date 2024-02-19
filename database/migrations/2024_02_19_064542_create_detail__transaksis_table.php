@@ -13,9 +13,11 @@ return new class extends Migration
     {
         Schema::create('detail__transaksis', function (Blueprint $table) {
             $table->id();
-            $table->string('id_barang')->nullable();
-            $table->string('nota')->nullable();
-            $table->double('count')->nullable();
+            $table->string('nota');
+            $table->string('id_stuff');
+            $table->integer('count')->default(0);
+            $table->double('price')->default(0);
+            $table->double('discount')->default(0);
             $table->timestamps();
         });
     }

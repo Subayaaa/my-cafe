@@ -13,11 +13,9 @@ return new class extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->string('nota')->primary();
-            $table->string('id_user')->nullable();
-            $table->string('id_customer')->nullable();
-            $table->double('discount')->nullable();
-            $table->integer('total')->nullable();
-            $table->integer('amount')->nullable();
+            $table->string('id_user');
+            $table->string('id_customer');
+            $table->date('date')->nullable();
             $table->timestamps();
         });
     }
