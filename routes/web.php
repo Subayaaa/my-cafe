@@ -1,7 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\TransactionController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\StuffController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,12 +19,17 @@ use App\Http\Controllers\TransactionController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/home', function () {
     return view('home');
 });
 
 Route::get('transaction', [TransactionController::class, 'index']);
 Route::get('transaction/add', [TransactionController::class, 'create']);
+
+Route::get('category', [CategoryController::class, 'index']);
+Route::get('category/add', [CategoryController::class, 'create']);
+
+Route::get('customer', [CustomerController::class, 'index']);
+Route::get('customer/add', [CustomerController::class, 'create']);
+
+Route::get('stuff', [StuffController::class, 'index']);
+Route::get('stuff/add', [StuffController::class, 'create']);
