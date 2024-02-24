@@ -182,13 +182,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="/Admin/pages/layout/top-nav.html" class="nav-link">
+                            <a href="#" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Tambah</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/Admin/pages/layout/top-nav-sidebar.html" class="nav-link">
+                            <a href="#" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Lihat</p>
                             </a>

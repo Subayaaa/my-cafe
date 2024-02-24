@@ -1,6 +1,6 @@
 @extends('Template.index')
 
-@section('title', 'Transaction Add')
+@section('title', 'Category Add')
 
 @section('content')
     <div class="content-wrapper">
