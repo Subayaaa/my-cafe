@@ -11,7 +11,7 @@ class StoreDetail_TransaksiRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**

@@ -2,7 +2,7 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
-        <img src="unnamed.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+        <img src="{{ asset('unnamed.jpg') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
         <span class="brand-text font-weight-light">Toko Dreamy</span>
     </a>
 
@@ -77,7 +77,7 @@
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-copy"></i>
+                        <i class="nav-icon far fa-money-bill-alt"></i>
                         <p>
                             Transaksi
                             <i class="fas fa-angle-left right"></i>
@@ -86,13 +86,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="/transaction/add" class="nav-link">
+                            <a href="/transactions/create" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Tambah</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/transaction" class="nav-link">
+                            <a href="/transactions" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Lihat</p>
                             </a>
@@ -101,7 +101,7 @@
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-copy"></i>
+                        <i class="nav-icon far fa-smile"></i>
                         <p>
                             Customer
                             <i class="fas fa-angle-left right"></i>
@@ -110,13 +110,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="/customer/add" class="nav-link">
+                            <a href="/customers/create" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Tambah</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/customer" class="nav-link">
+                            <a href="/customers" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Lihat</p>
                             </a>
@@ -125,7 +125,7 @@
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-copy"></i>
+                        <i class="nav-icon fas fa-building"></i>
                         <p>
                             Barang
                             <i class="fas fa-angle-left right"></i>
@@ -134,13 +134,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="/stuff/add" class="nav-link">
+                            <a href="/stuffs/create" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Tambah</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/stuff" class="nav-link">
+                            <a href="/stuffs" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Lihat</p>
                             </a>
@@ -149,7 +149,7 @@
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-copy"></i>
+                        <i class="nav-icon fas fa-list-alt"></i>
                         <p>
                             Kategori
                             <i class="fas fa-angle-left right"></i>
@@ -158,13 +158,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="/category/add" class="nav-link">
+                            <a href="/categories/create" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Tambah</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/category" class="nav-link">
+                            <a href="/categories" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Lihat</p>
                             </a>
@@ -173,7 +173,7 @@
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-copy"></i>
+                        <i class="nav-icon far fa-user"></i>
                         <p>
                             User
                             <i class="fas fa-angle-left right"></i>
@@ -182,13 +182,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="/users/create" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Tambah</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="/users" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Lihat</p>
                             </a>

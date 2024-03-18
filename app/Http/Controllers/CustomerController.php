@@ -13,7 +13,11 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        return view('customer.list');
+        $customers = Customer::all();
+
+        return view('customer.list', [
+            'data' => $customers
+        ]);
     }
 
     /**
@@ -29,7 +33,11 @@ class CustomerController extends Controller
      */
     public function store(StoreCustomerRequest $request)
     {
-        //
+        Customer::create($request->all());
+
+        return redirect('/customers')->with([
+            'mess' => 'Data berhasil disimpan'
+        ]);
     }
 
     /**
@@ -37,7 +45,9 @@ class CustomerController extends Controller
      */
     public function show(Customer $customer)
     {
-        //
+        return view('customer.add', [
+            'data' => $customer
+        ]);
     }
 
     /**
@@ -53,7 +63,12 @@ class CustomerController extends Controller
      */
     public function update(UpdateCustomerRequest $request, Customer $customer)
     {
-        //
+        $customer->fill($request->all());
+        $customer->save();
+
+        return redirect('/customers')->with([
+            'mess' => 'Data berhasil disimpan ✌🏿'
+        ]);
     }
 
     /**
@@ -61,6 +76,10 @@ class CustomerController extends Controller
      */
     public function destroy(Customer $customer)
     {
-        //
+        $customer->delete();
+
+        return redirect('/customers')->with([
+            'mess' => 'Data berhasil dihapus ✌🏿'
+        ]);
     }
 }

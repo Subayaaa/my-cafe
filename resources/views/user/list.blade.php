@@ -8,12 +8,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Data Kategori</h1>
+                        <h1>Data User</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Data Kategori</li>
+                            <li class="breadcrumb-item active">Data User</li>
                         </ol>
                     </div>
                 </div>
@@ -42,7 +42,7 @@
                         @endif
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">Data Kategori(s)</h3>
+                                <h3 class="card-title">Data User(s)</h3>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
@@ -50,8 +50,10 @@
                                     <thead>
                                         <tr>
                                             <th>ID</th>
+                                            <th>Avatar</th>
                                             <th>Nama</th>
-                                            <th>Status</th>
+                                            <th>Email</th>
+                                            <th>Level</th>
                                             <th></th>
                                         </tr>
                                     </thead>
@@ -59,16 +61,18 @@
                                         @foreach ($data as $item)
                                             <tr>
                                                 <td>{{ $item->id }}</td>
+                                                <td><img style="width: 200px; height: auto;" src="{{ $item->avatar }}"></td>
                                                 <td>{{ $item->name }}</td>
-                                                <td>{{ $item->status == 1 ? 'Ada' : 'Belum Ada' }}</td>
+                                                <td>{{ $item->email }}</td>
+                                                <td>{{ $item->level }}</td>
                                                 <td>
-                                                    <a href="/categories/{{ $item->id }}">
+                                                    <a href="/users/{{ $item->id }}">
                                                         <button type="button" class="btn btn-warning btn-sm">
                                                             <i class="fas fa-edit"></i>
                                                         </button>
                                                     </a>
 
-                                                    <form action="/categories/{{ $item->id }}" method="POST">
+                                                    <form action="/users/{{ $item->id }}" method="POST">
                                                         @csrf
                                                         @method('DELETE')
                                                         <button type="submit" class="btn btn-danger btn-sm">
@@ -80,14 +84,14 @@
                                         @endforeach
                                     </tbody>
                                     {{-- <tfoot>
-                  <tr>
-                    <th>Rendering engine</th>
-                    <th>Browser</th>
-                    <th>Platform(s)</th>
-                    <th>Engine version</th>
-                    <th>CSS grade</th>
-                  </tr>
-                  </tfoot> --}}
+                                        <tr>
+                                            <th>Rendering engine</th>
+                                            <th>Browser</th>
+                                            <th>Platform(s)</th>
+                                            <th>Engine version</th>
+                                            <th>CSS grade</th>
+                                        </tr>
+                                    </tfoot> --}}
                                 </table>
                             </div>
                             <!-- /.card-body -->
